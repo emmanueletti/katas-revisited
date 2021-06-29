@@ -11,13 +11,15 @@ const sumLargestNumbers = function (data) {
   const output = data
     .sort((a, b) => {
       return b - a;
+      // sort array from largest to smallest
     })
     .filter((el, i) => {
       return i <= 1;
+      // filter down to array of just index 0 and 1
     })
     .reduce((acc, curr) => acc + curr, 0);
+  // sum up the array
 
-  // console.log(sortedArray);
   return output;
 };
 
